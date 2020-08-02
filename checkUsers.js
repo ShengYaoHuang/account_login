@@ -27,13 +27,10 @@ function checkUsers(user) {
     }
   ]
 
-  for (let i = 0; i < users.length; i++) {
-    if (user.email === users[i].email && user.password === users[i].password) {
-      return `${users[i].firstName}`
-    } else {
-      return false
-    }
-  }
+  const checkuser = users.find(user => user.email === userData.email && user.password === userData.password)
+  if (checkuser) {
+    return `${checkuser.firstName}`
+  } return false
 }
 
 module.exports = checkUsers
