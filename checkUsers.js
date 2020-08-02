@@ -1,4 +1,4 @@
-function checkUsers(user) {
+function checkUsers(userData) {
   const users = [
     {
       firstName: 'Tony',
